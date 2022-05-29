@@ -22,7 +22,7 @@
 
     async function  initMap() {
 
-      const response = await fetch('https://frequency-simulator.herokuapp.com/receivers');
+      const response = await fetch('http://localhost:3000/receivers');
 
       const receivers = await response.json();
       var icon = {
