@@ -1,0 +1,66 @@
+<html>
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="./assets/css/styles.css"> -->
+  
+  <style>
+    #map {
+        height: 80%;
+        width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <div id="map"></div>
+  <script>
+
+    async function  initMap() {
+
+      const response = await fetch('http://localhost:3000/receivers');
+
+      const receivers = await response.json();
+      var icon = {
+      url: "assets/img/icon101.png",
+      scaledSize: new google.maps.Size(32, 32),
+      };
+      var options = {     
+          zoom: 10,
+          center: { lat: 33.933241, lng: -84.340288 }
+      }
+      var map = new google.maps.Map(document.getElementById('map'), options);
+      var marker, circle, i;
+
+      for (i = 0; i < receivers.length; i++) {  
+      marker = new google.maps.Marker({
+      position: {lat: receivers[i].data.latitude, lng: receivers[i].data.longitude},
+      map: map,
+      icon:icon
+      });
+      circle = new google.maps.Circle({
+      map: map,
+      radius: receivers[i].data.coverage * 1000,
+      fillColor: '#000000',
+      fillOpacity: 0.2,
+      strokeWeight:0
+      
+      });
+      circle.bindTo('center', marker, 'position');
+      }
+  }
+
+  </script>
+  <script defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlWnvLoFl72OeO3FpOkFBObwN5Vr6EkZA&callback=initMap"></script>
+
+</body>
+
+</html>
