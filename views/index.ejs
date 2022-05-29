@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="mt-5 mb-5 row align-items-space-between">
+            <h1 class="col">Receivers</h1>
+            <div class="col"><a href="/add"><button class='btn btn-info btn-large'>Add a receiver</button></a></div>
+        </div>
+        
+        <div id="receivers">
+            
+            <ol>
+
+                <% list.forEach(function(receiver) { %>
+                    
+                    <% var id = JSON.stringify(receiver.id).replace(/"/g, '') %>
+                   <li> Latitude: <%= JSON.stringify(receiver.data.latitude) %> <br> Longitude: <%= JSON.stringify(receiver.data.longitude) %> <br> Coverage: <%= JSON.stringify(receiver.data.coverage) %>
+                    <form action="/delete" method="POST">
+                        <input type="hidden" class="form-control" name="id" id="id" value = "<%= id %>">
+                        <button type="submit" class="btn btn-outline-secondary btn-small">Delete</button>
+                    </form>
+                  </li><br>
+                <% }) %>
+            </ol>
+                
+        </div>
+
+    </div>
+</body>
+</html>
