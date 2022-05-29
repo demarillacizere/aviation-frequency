@@ -34,13 +34,13 @@ app.get("/add", async (req, res) => {
 });
 
 app.post('/add', urlencodedParser, [
-  check('coverage', 'Please enter a valid coverage')
+  check('coverage', 'Please enter a valid value for coverage')
       .exists()
       .isNumeric(),
-  check('latitude', 'Please enter a valid latitude value')
+  check('latitude', 'Please enter a valid value for latitude')
       .exists()
       .isNumeric(),
-  check('longitude', 'Please enter a valid longitude value')
+  check('longitude', 'Please enter a valid vaue for longitude')
   .exists()
   .isNumeric(),
 ], async (req, res)=> {
