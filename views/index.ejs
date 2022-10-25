@@ -14,8 +14,34 @@
         </div>
         
         <div id="receivers">
+            <table  class="table">
+                <thead>
+                    <tr>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                        <th>Coverage</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                
+                <% list.forEach(function(receiver) { %>
+                    
+                    <% var id = JSON.stringify(receiver.id).replace(/"/g, '') %>
+                    <tr>
+                        <td><%= JSON.stringify(receiver.data.latitude) %>  
+                        </td>
+                        <td> <%= JSON.stringify(receiver.data.longitude) %></td>
+                        <td><%= JSON.stringify(receiver.data.coverage) %></td>
+                        <td><form action="/delete" method="POST">
+                            <input type="hidden" class="form-control" name="id" id="id" value = "<%= id %>">
+                            <button type="submit" class="btn btn-outline-secondary btn-small">Delete</button>
+                        </form></td>
+                    </tr>
+                   
+                <% }) %>
+            </table>
             
-            <ol>
+            <!-- <ol>
 
                 <% list.forEach(function(receiver) { %>
                     
@@ -27,7 +53,7 @@
                     </form>
                   </li><br>
                 <% }) %>
-            </ol>
+            </ol> -->
                 
         </div>
 
