@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="container">
+        <div class="mt-3"><a href="\" class="btn btn-default text-info">View the Map</a></div>
         <div class="mt-5 mb-5 row align-items-space-between">
             <h1 class="col">Receivers</h1>
             <div class="col"><a href="/add"><button class='btn btn-info btn-large'>Add a receiver</button></a></div>
@@ -17,6 +18,7 @@
             <table  class="table">
                 <thead>
                     <tr>
+                        <th>#</th>
                         <th>Latitude</th>
                         <th>Longitude</th>
                         <th>Coverage</th>
@@ -26,10 +28,9 @@
                 
                 <% list.forEach(function(receiver) { %>
                     
-                    <% var id = JSON.stringify(receiver.id).replace(/"/g, '') %>
                     <tr>
-                        <td><%= JSON.stringify(receiver.data.latitude) %>  
-                        </td>
+                        <td><% var id = JSON.stringify(receiver.id).replace(/"/g, '') %></td>
+                        <td><%= JSON.stringify(receiver.data.latitude) %></td>
                         <td> <%= JSON.stringify(receiver.data.longitude) %></td>
                         <td><%= JSON.stringify(receiver.data.coverage) %></td>
                         <td><form action="/delete" method="POST">
