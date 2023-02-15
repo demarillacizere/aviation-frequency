@@ -5,7 +5,6 @@
 
 **[Louise Demarillac Izere](https://github.com/demizere)**
 
-## [Video Recording](https://youtu.be/sWDXicH_PIA)
 ## [Frontend](https://frequency-simulator.herokuapp.com/)
 ## [Backend](https://frequency-simulator.herokuapp.com/api)
 
