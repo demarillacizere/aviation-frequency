@@ -3,14 +3,14 @@
 
 # AUTHOR
 
-**[Louise Demarillac Izere](https://github.com/demarillacizere)**
+**[Demarillac Izere](https://github.com/demarillacizere)**
 
 ## [Frontend](https://frequency-simulator.herokuapp.com/)
 ## [Backend](https://frequency-simulator.herokuapp.com/api)
 
 # DESCRIPTION
 
-This is a web-based tool that can simulate the coverage of signal receivers installed all around the world, on buildings or telecommunication antennas for aircraft transponders
+This is a web-based tool that can simulate the coverage of signal receivers installed all around the world, on buildings or telecommunication antennas for aircraft transponders.
 
 
 #### User Stories
