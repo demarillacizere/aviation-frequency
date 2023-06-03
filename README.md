@@ -14,7 +14,7 @@
 This is a web-based tool that can simulate the coverage of signal receivers installed all around the world, on buildings or telecommunication antennas for aircraft transponders.
 
 
-#### User Stories
+## User Stories
 
 * A user can view the map showing the receivers' locations and their coverage
 * A user can add a receiver
