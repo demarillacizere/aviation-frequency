@@ -16,9 +16,9 @@ This is a web-based tool that can simulate the coverage of signal receivers inst
 
 ## User Stories
 
-* A user can view the map showing the receivers' locations and their coverage
-* A user can add a receiver
-* A user can delete a receiver
+* A user can view the map showing the receivers' locations and their coverage.
+* A user can add a receiver.
+* A user can delete a receiver.
 
 
 ## Technologies used
