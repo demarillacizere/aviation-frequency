@@ -5,9 +5,9 @@
 
 **[Demarillac Izere](https://github.com/demarillacizere)**
 
-## [Frontend](https://frequency-simulator.herokuapp.com/)
+## [Link to the Frontend](https://frequency-simulator.herokuapp.com/)
 
-## [Backend](https://frequency-simulator.herokuapp.com/api)
+## [Link to the Backend](https://frequency-simulator.herokuapp.com/api)
 
 # DESCRIPTION
 
