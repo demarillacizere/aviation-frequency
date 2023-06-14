@@ -29,7 +29,7 @@ This is a web-based tool that can simulate the coverage of signal receivers inst
 
 ## How to set up locally
 * Clone the repo to your local machine using https://github.com/demarillacizere/aviation-frequency.git
-* Install npm dependencies using npm install: 
+* Install npm dependencies using: 
 ```shell
 $ cd npm install
 ```
