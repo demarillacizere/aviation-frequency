@@ -21,7 +21,7 @@ This is a web-based tool that can simulate the coverage of signal receivers inst
 * A user can delete a receiver.
 
 
-## Technologies used
+## Technologies Used
 * Frontend: HTML, CSS, Javascript
 * Backend: Node JS, Express JS
 * Database: Firebase
