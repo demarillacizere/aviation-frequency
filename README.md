@@ -1,7 +1,7 @@
 # AVIATION FREQUENCY PROPAGATION SIMULATOR
 
 
-# AUTHOR
+## AUTHOR
 
 **[Demarillac Izere](https://github.com/demarillacizere)**
 
